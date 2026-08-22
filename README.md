@@ -6,7 +6,7 @@ A small collection of prompts for generating a personal daily newspaper.
 
 In your local terminal, paste: `GPT, read this set of prompts at url https://github.com/TJamesCorcoran/personal-newspaper-prompts/personal-daily-newspaper-bootstrap-prompt.md and execute them.`
 
-Travis' own settings can be found in https://github.com/TJamesCorcoran/personal-newspaper-prompts/tjic-daily-paper-settings.yaml
+Travis' own settings can be found in https://raw.githubusercontent.com/TJamesCorcoran/personal-newspaper-prompts/refs/heads/main/tjic-daily-paper-settings.yaml or in essay form at https://raw.githubusercontent.com/TJamesCorcoran/personal-newspaper-prompts/refs/heads/main/TJIC-what-i-want-to-read-editorial-self-portrait.md
 
 
 	He sat down at the kitchen table. Mrs. Hull was already marmalading
