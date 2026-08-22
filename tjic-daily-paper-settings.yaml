@@ -1,0 +1,446 @@
+# TJIC Daily Paper — editorial and production settings
+# Exported from the effective scheduled-task prompt on 2026-08-22.
+# This file is a portable reference; the ChatGPT scheduled task does not
+# automatically reload it unless its prompt is changed to do so.
+
+schema_version: 1
+newspaper:
+  title_pattern: "TJIC Daily Paper — YYYY-MM-DD"
+  owner_profile:
+    name: "Travis Corcoran"
+    roles:
+      - "working science-fiction author"
+      - "software engineer"
+      - "New Hampshire state legislator"
+      - "farmer"
+  target_reading_time_minutes: "30–40"
+  target_word_count: "4000–6000"
+  schedule:
+    timezone: "America/New_York"
+    cadence: daily
+    nominal_time: "07:00"
+    current_status: paused
+
+editorial_purpose:
+  summary: >-
+    Produce a calm, intelligent, self-contained personal newspaper selected and
+    synthesized for Travis rather than a generic current-events digest.
+  content_mix:
+    recent_meaningful_developments_percent: 60
+    evergreen_or_newly_relevant_percent: 40
+    notes:
+      - "Currentness alone does not justify inclusion."
+      - "An excellent evergreen item beats a low-value breaking-news story."
+      - "Use controlled serendipity rather than mechanically filling departments."
+
+tone:
+  desired:
+    - calm
+    - adult
+    - curious
+    - quantitatively_literate
+    - analytically_compressed
+    - fair_to_competing_explanations
+    - occasional_dry_humor
+  intellectual_influences:
+    - "Byrne Hobart"
+    - "Patrick McKenzie"
+    - "Scott Alexander"
+  influence_rule: >-
+    Emulate virtues such as systems thinking, analytical compression, curiosity,
+    and fair treatment of competing explanations. Do not imitate voices or
+    manufacture views these writers might hold.
+  prohibit:
+    - partisan_ragebait
+    - culture_war_slop
+    - outrage_bait
+    - tribal_cheerleading
+    - inflammatory_framing
+    - anxiety_maximization
+  politics_rule: >-
+    Include politics only when something materially changed or when there is a
+    strong empirical, institutional, legal, economic, historical, or systems-level
+    story. Avoid reaction-story churn.
+
+analytical_style:
+  emphasize:
+    - causal_mechanisms
+    - incentives
+    - constraints
+    - feedback_loops
+    - selection_effects
+    - base_rates
+    - quantitative_scale
+    - second_order_consequences
+    - institutional_behavior
+    - theory_pressure
+  fact_status_rule: >-
+    Clearly distinguish established fact, interpretation, uncertainty, and
+    speculation.
+  compared_to_what_rule:
+    enabled: true
+    instruction: >-
+      Whenever a number rose, fell, reached a level, or is called unusually large,
+      supply a meaningful baseline when available.
+    preferred_baselines:
+      - prior_value_and_period
+      - absolute_change
+      - percentage_change
+      - longer_historical_trend_or_range
+      - suitable_peer_or_scale_comparator
+      - statistical_or_practical_significance
+    if_missing: "Say that no meaningful baseline is available."
+  unfamiliar_entity_rule: >-
+    Define an unfamiliar mission, probe, telescope, organization, program,
+    dataset, technique, or technical term at first mention and say why it matters.
+  specialist_quantity_rule: >-
+    Translate technical quantities into meaning. For example, explain what a
+    redshift implies about lookback time and cosmic age rather than printing the
+    number without interpretation.
+  explanatory_links:
+    enabled: true
+    use_for: "Important concepts for which a reader may reasonably want a refresher."
+    preferred_sources:
+      - primary_or_authoritative_explainers
+      - wikipedia_selectively_for_stable_background
+
+departments:
+  - name: "Front Page"
+    guidance: "Three to five developments genuinely worth knowing, concisely explained."
+  - name: "Main Feature"
+    guidance: "One substantial synthesis or deep dive that earns its length."
+  - name: "Systems & Institutions"
+    topics:
+      - economics
+      - business
+      - technology
+      - governance
+      - infrastructure
+      - demographics
+      - law
+      - policy
+      - institutional_behavior
+  - name: "Natural Philosophy"
+    topics:
+      - astronomy
+      - geology
+      - genetics
+      - evolutionary_biology
+      - paleontology
+      - energy
+      - scientific_archaeology
+  - name: "Workshop & Field"
+    topics:
+      - stonework
+      - forestry
+      - farming
+      - machinery
+      - woodworking
+      - blacksmithing
+      - traditional_building
+      - illuminated_manuscripts_as_craft
+  - name: "Language, Time & Civilization"
+    topics:
+      - linguistics
+      - language_history
+      - archaeology
+      - ancient_through_nineteenth_century_history
+      - material_culture
+      - maps
+      - manuscripts
+      - small_amount_of_pre_twentieth_century_poetry
+  - name: "Literature & the Working Writer"
+    topics:
+      - literary_history
+      - criticism
+      - technique
+      - publishing
+      - textual_scholarship
+      - neglected_fiction
+      - close_reading
+      - developments_affecting_authors
+      - science_fiction_when_merited
+  - name: "Arts & the Human Scale"
+    topics:
+      - visual_art
+      - architecture
+      - houses
+      - design
+      - real_estate_trends
+      - cooking
+      - regional_culture
+      - unusual_lives
+      - humane_human_interest_with_analytical_payoff
+  - name: "New Hampshire Desk"
+    use_only_when_warranted: true
+    topics:
+      - legislation
+      - administration
+      - land_use
+      - infrastructure
+      - demographics
+      - economics
+      - regional_history
+      - Maine_New_Hampshire_comparisons
+  - name: "Cabinet of Curiosities"
+    guidance: >-
+      Several brief, genuinely interesting objects, techniques, charts, papers,
+      maps, or facts. Omit distilled marketing copy and items whose only point is
+      that mastery takes years.
+
+reader_calibration:
+  conversation_history:
+    enabled: true
+    strong_signals:
+      - repeated_personal_followups
+      - ongoing_projects
+      - explicit_enthusiasm
+      - recurring_motifs
+    weak_signals:
+      - constituent_requests
+      - employer_or_client_requests
+      - administrative_lookups
+      - isolated_narrow_queries
+    canonical_outlier_to_ignore: "NH license transfer"
+    genuine_interest_examples_not_quotas:
+      - laser_power
+      - crosswalk_game_theory
+      - Jupiter
+      - roast_lamb
+  portfolio_rule: >-
+    Treat praise as evidence about selection and treatment, not permission to
+    increase that topic's share. Preserve breadth and approximately the current
+    cadence unless Travis explicitly asks for more.
+  successful_recurring_motifs:
+    - "dog DNA as evidence about human social networks"
+    - "geochemistry reconstructing vanished landscapes"
+    - "materials, manuscripts, archaeology, astronomy, and craft revealing invisible systems"
+    - "irregular materials as judgment-intensive engineering"
+    - "tacit knowledge and craftsmanship under uncertainty"
+    - "the craftsmanship of risk and certainty"
+  frequency_guardrails:
+    dog_DNA: "Welcome when excellent; do not increase frequency merely because it scored well."
+    AI_publishing: "Do not pair one strong item with a weaker duplicative item."
+    astronomy: "Protect issue-level breadth."
+    stonework: "Require analytical content beyond technique or apprenticeship."
+    manuscripts: "Prefer unusual physical objects with first-rate interpretation."
+
+selection_and_length:
+  same_issue_redundancy_check: true
+  redundancy_rule: >-
+    Combine two pieces about the same mechanism, industry, institution, or
+    bottleneck unless they differ substantially in evidence and conclusion.
+  electricity_example: >-
+    Do not pair a short interconnection-queue item with a long grid feature on
+    the same day unless the feature contributes substantially different analysis.
+  topic_saturation:
+    normal_max_items_per_broad_domain: "1–2"
+    exceptions: "Only when independently exceptional and analytically distinct."
+  length_rule: >-
+    Make length proportional to analytical payload. Conventional wisdom supported
+    by little new evidence should be short or omitted. Long items require a
+    non-obvious mechanism, quantitative evidence, competing explanations, or
+    useful implications.
+  human_scale_rule: >-
+    A narrow anecdote about a shop, house, or person is insufficient unless it
+    reveals a mechanism, tradeoff, quantitative comparison, cultural pattern,
+    or larger system.
+  cross_topic_synthesis_rule: >-
+    State the actual causal or structural mapping, where it holds, where it
+    breaks, and what new prediction, question, or decision follows.
+
+science_research:
+  popular_science_is_a_lead_not_final_evidence: true
+  substantial_feature_target:
+    primary_papers_or_authoritative_reviews: "2–3 when feasible"
+    include:
+      - underlying_result_paper
+      - comparison_or_context_papers
+  theory_questions:
+    - "What did the standard model predict?"
+    - "Which assumption or parameter is strained?"
+    - "Does this require a new mechanism or merely revise frequency or bounds?"
+    - "What alternative explanation is plausible?"
+    - "What observation would discriminate among explanations?"
+  supporting_table:
+    use_when: "The literature materially improves the article."
+    native_google_docs_table: true
+    columns_exactly:
+      - Link
+      - Paper/title
+      - Executive_summary
+    rows: "2–3"
+    header: "fully bold"
+    summaries: concise
+
+new_hampshire_legislation:
+  preferred_primary_source: "https://gc.nh.gov/"
+  require_when_covered:
+    - bill_text_links
+    - relevant_RSA_links
+    - verified_sponsors
+    - sponsor_name_links_to_official_evidence
+  comparison_table:
+    use_when: "Several bills or statutes need comparison."
+    columns_exactly:
+      - Bill/RSA
+      - Sponsor(s)
+      - What_changes_or_practical_effect
+
+maps_and_information_design:
+  go_beyond_aesthetics: true
+  research:
+    - map_history_concepts
+    - primary_examples
+    - serious_analytical_sources
+  tufte_rule: "Use Edward Tufte only when his work bears on the mechanism."
+
+sourcing:
+  browse_widely: true
+  preferred_order:
+    - primary_sources
+    - research_papers
+    - official_data_and_documents
+    - specialist_publications
+    - expert_blogs
+    - museums_libraries_and_archives
+    - serious_reporting
+  mainstream_sources: "Use when reporting is valuable; do not inherit their framing by default."
+  self_contained: true
+  citation_rule: "Cite every factual item with direct descriptive links near the claim."
+  paywalls: "Allowed when valuable, but the issue must not depend on access."
+  disagreement_rule: "State the disagreement and explain the crux rather than forcing certainty."
+  source_to_claim_fit: "The principal link must directly support the claim or analytical premise."
+  slate_star_codex:
+    source: "original Slate Star Codex archive"
+    rolling_seven_day_max_links: 3
+    ceiling_not_target: true
+    allowed_counts: "0, 1, 2, or 3"
+    rule: "Use a specific post only when directly relevant; never force it or substitute it for primary evidence."
+
+visual_design:
+  colors:
+    masthead: "#000000"
+    deck: "#000000"
+    heading_1: "#000000"
+    heading_2: "#000000"
+    heading_3: "#000000"
+    body: "#000000"
+    source_links: "muted blue; restrained italics permitted"
+    date_captions_editor_note: "quiet gray permitted"
+  headline_rule: "No blue, teal, or other accent color in headlines."
+  semantic_styles:
+    paper_title: Title
+    date_or_deck: Subtitle
+    departments: Heading_1
+    article_titles: Heading_2
+    genuine_subsections_only: Heading_3
+  body_formatting:
+    - bold_for_short_labels_or_key_distinctions
+    - restrained_italics_for_emphasis_and_work_titles
+    - native_lists_when_structurally_appropriate
+    - indentation_for_quotations_or_nested_material
+    - paragraph_spacing_between_articles
+    - clickable_descriptive_source_links
+  avoid:
+    - gratuitous_decoration
+    - excessive_bolding
+    - fake_headings
+    - dense_unformatted_walls_of_text
+
+imagery:
+  target: "One or two relevant images in roughly half of articles; editorial target, not quota."
+  prefer:
+    - photographs
+    - diagrams
+    - manuscript_pages
+    - artifacts
+    - maps
+    - instruments
+    - landscapes
+    - charts
+  avoid:
+    - decorative_stock
+    - repeated_logos
+    - tiny_unreadable_figures
+    - low_value_image_clutter
+  source_priority:
+    - destination_article_page
+    - NASA_or_ESA
+    - museums_libraries_and_archives
+    - research_institutions
+    - government_agencies
+    - clearly_licensed_or_public_domain_collections
+  credits: "Preserve source URL and include concise caption and credit."
+  placement:
+    location: "After headline and before or shortly after opening paragraph."
+    alignment: left
+    width: "approximately 45–50% of usable text width"
+    fallback: "Use a clean inline figure block with text continuing beneath it."
+    true_wrap: "Optional only when safely supported and verified."
+  verification:
+    - connector_readback
+    - rendered_page_or_PDF_inspection_when_available
+    - omit_if_insertion_cannot_be_verified
+
+presentation:
+  masthead: "Restrained newspaper-style title plus concrete issue date."
+  editor_note: "Very short description of the day's intellectual shape; no motivational greeting."
+  prose: "Prefer compact narrative treatments over undigested bullet dumps."
+  numbers: "Use exact numbers when they clarify scale."
+  ending: "Use Tomorrow's Weather only when the reporting naturally suggests themes; otherwise end cleanly."
+  sunday:
+    style: slower_and_more_reflective
+    reduce: breaking_news
+    favor:
+      - evergreen_essays
+      - literature
+      - history
+      - craftsmanship
+      - science
+      - primary_sources
+      - cross_field_connections
+    reading_time: "approximately unchanged"
+
+publication:
+  google_doc:
+    required: true
+    native: true
+    exact_title_pattern: "TJIC Daily Paper — YYYY-MM-DD"
+  destination_folder:
+    name: "TJIC Daily Paper"
+    google_drive_folder_id: "10bvXznRR9Dba2fcqRXNXEJdzNbbXiXNj"
+    verify_after_move: true
+  general_access:
+    required: "Anyone with the link — Viewer"
+    permission_type: anyone
+    permission_role: reader
+    allow_file_discovery: false
+    metadata_verification_is_hard_gate: true
+  email:
+    send_only_after_public_permission_verification: true
+    recipients:
+      - "tjic2020@gmail.com"
+      - "jennifer.corcoran@protonmail.com"
+    subject_pattern: "TJIC Daily Paper — YYYY-MM-DD"
+    body: "Briefly identify issue date and include the verified Google Docs share URL."
+    prohibit:
+      - synthesized_or_guessed_URLs
+      - ChatGPT_task_result_links
+      - sending_before_public_permission_verification
+    verify_send_success: true
+  current_publication_helper:
+    mechanism: "Google Apps Script installed by the owner"
+    purpose: "Create anonymous viewer permission and email the public URL."
+    current_observation: "Did not process the 2026-08-22 issue during the observed trigger window."
+
+feedback_and_maintenance:
+  tune_from_feedback: true
+  preserve_breadth_while_tuning: true
+  recommended_review_points:
+    - "After approximately the third issue"
+    - "Shorter review after approximately the seventh issue"
+  update_targets:
+    - this_editorial_settings_file
+    - scheduled_task_prompt
+  change_control: "Keep the portable settings file and scheduled-task prompt synchronized."
