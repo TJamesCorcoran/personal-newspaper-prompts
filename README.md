@@ -8,6 +8,10 @@ In your local terminal, paste: `GPT, read this set of prompts at url https://git
 
 Travis' own settings can be found in https://raw.githubusercontent.com/TJamesCorcoran/personal-newspaper-prompts/refs/heads/main/tjic-daily-paper-settings.yaml or in essay form at https://raw.githubusercontent.com/TJamesCorcoran/personal-newspaper-prompts/refs/heads/main/TJIC-what-i-want-to-read-editorial-self-portrait.md
 
+## See Also
+
+* https://www.effort.news/
+
 
 	He sat down at the kitchen table. Mrs. Hull was already marmalading
 	his crumpet. As she laid out plates and silver, Hackworth picked up a
